@@ -184,15 +184,24 @@ LOCAL_MODULE_OWNER := qti
 LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_C_INCLUDES := \
+<<<<<<< HEAD
         vendor/qcom/opensource/audio-hal/primary-hal/hal \
+=======
+        hardware/qcom/audio-caf-msm8996/hal \
+>>>>>>> 10b7a647... bring back TARGET_QCOM_AUDIO_VARIANT
         $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
         $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/techpack/audio/include \
         external/tinyalsa/include \
         $(call include-path-for, audio-effects) \
         $(call include-path-for, audio-route) \
+<<<<<<< HEAD
         vendor/qcom/opensource/audio-hal/primary-hal/hal/audio_extn \
         external/tinycompress/include \
         system/media/audio_utils/include
+=======
+        hardware/qcom/audio-caf-msm8996/hal/audio_extn \
+        external/tinycompress/include
+>>>>>>> 10b7a647... bring back TARGET_QCOM_AUDIO_VARIANT
 
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_DLKM)),true)
   LOCAL_HEADER_LIBRARIES += audio_kernel_headers
@@ -231,7 +240,7 @@ LOCAL_MODULE_OWNER := google
 LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_C_INCLUDES := \
-    hardware/qcom/audio/hal \
+    hardware/qcom/audio-caf-msm8998/hal \
     system/media/audio/include/system \
     $(call include-path-for, audio-effects)
 
